@@ -84,6 +84,11 @@ export default {
       pt: ["115px", "125px", "135px", "200px", "170px", "170px", "185px"],
       pb: ["10px", "15px", null, "10px", "50px", "60px", "90px", "20px"],
     },
+    about: {
+      overflow: "hidden",
+      pt: ["60px", "80px", "80px", "90px", "50px", "45px", "5px"],
+      pb: [0, "58px", null, "10px", "40px", "20px", "45px", "160px"],
+    },
   },
   container: {
     home: {
@@ -110,6 +115,30 @@ export default {
       ],
       flexDirection: ["column", "column", "row", "row", "row", "row", "row"],
     },
+    about: {
+      position: "relative",
+      display: "flex",
+      flexWrap: "wrap",
+      alignItems: [
+        "flex-start",
+        "center",
+        "center",
+        "flex-star",
+        null,
+        null,
+        null,
+      ],
+      justifyContent: [
+        "center",
+        "center",
+        "flex-start",
+        "flex-start",
+        "flex-start",
+        "center",
+        "center",
+      ],
+      flexDirection: ["column", "column", "row", "row", "row", "row", "row"],
+    },
   },
   content: {
     home: {
@@ -118,6 +147,13 @@ export default {
       order: ["2", "2", "1", null, null, null, null],
       position: "relative",
       right: ["-10px", "-10px", "-10px", "-5px", "-10px", "-60px", "-15px"],
+    },
+    about: {
+      maxWidth: ["100%", "580px", "295px", "320px", "400px", "395px", "395px"],
+      textAlign: ["center", "center", "left", "left", "left", "left", "left"],
+      order: ["1", "1", "2", null, null, null, null],
+      position: "relative",
+      right: ["-5px", "-5px", "-10px", "2px", "3px", "-60px", "-10px"],
     },
   },
   text: {
