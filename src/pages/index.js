@@ -1,10 +1,13 @@
 import theme from "theme";
+import Home from "../sections/";
 
 export default function IndexPage() {
   return (
     <ThemeProvider theme={theme}>
       <StickyProvider>
-        <Layout></Layout>
+        <Layout>
+          <Home />
+        </Layout>
       </StickyProvider>
     </ThemeProvider>
   );

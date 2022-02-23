@@ -78,7 +78,108 @@ export default {
     caps: "-0.5px",
   },
   // variants
-
+  section: {
+    home: {
+      overflow: "hidden",
+      pt: ["115px", "125px", "135px", "200px", "170px", "170px", "185px"],
+      pb: ["10px", "15px", null, "10px", "50px", "60px", "90px", "20px"],
+    },
+  },
+  container: {
+    home: {
+      position: "relative",
+      display: "flex",
+      flexWrap: "wrap",
+      alignItems: [
+        "flex-start",
+        "center",
+        "flex-start",
+        "flex-star",
+        null,
+        null,
+        null,
+      ],
+      justifyContent: [
+        "center",
+        "center",
+        "flex-start",
+        "flex-start",
+        "flex-start",
+        "center",
+        "center",
+      ],
+      flexDirection: ["column", "column", "row", "row", "row", "row", "row"],
+    },
+  },
+  content: {
+    home: {
+      maxWidth: ["100%", null, "285px", "420px", "400px", "395px", "405px"],
+      textAlign: ["left", null, null, "left"],
+      order: ["2", "2", "1", null, null, null, null],
+      position: "relative",
+      right: ["-10px", "-10px", "-10px", "-5px", "-10px", "-60px", "-15px"],
+    },
+  },
+  text: {
+    heading1: {
+      maxWidth: ["300px", null, null, "275px", "460px", "545px", "405px"],
+      fontSize: [28, 32, null, 34, 48, 48, 48, 48],
+      lineHeight: [1.3, 1.5, 1.5, 1.5, null, null, 1.5],
+      color: "heading",
+      letterSpacing: "heading",
+      fontWeight: "bold",
+      mx: ["0", null, null, "0", "0", null, null],
+    },
+    secondary1: {
+      fontSize: [15, null, null, null, 16, 16],
+      lineHeight: 1.6,
+      color: "heading_secondary",
+      fontWeight: "normal",
+      maxWidth: ["100%", null, "280px", "320px", "400px", "315px", "315px"],
+      mt: [3, null, null, "18px"],
+      pr: [0, null, null, null, null, null, null, "50px"],
+    },
+  },
+  buttons: {
+    primary: {
+      backgroundColor: "primary",
+      borderRadius: "3rem",
+      lineHeight: "heading",
+      fontSize: 15,
+      padding: ["14px 20px 13px", "14px 25px 13px", "15px 21px 15px"],
+      fontWeight: "heading",
+      display: "inline-flex",
+      alignItems: "center",
+      cursor: "pointer",
+      color: "secondary",
+      transition: "0.3s",
+      "&:hover": {
+        opacity: 0.8,
+      },
+    },
+  },
+  images: {
+    home: {
+      mt: ["20px", null, null, 0, null, null, null],
+      mb: ["50px", null, null, null, null, null, null],
+      pl: [0, null, null, null, 0, null, null, null],
+      display: "flex",
+      justifyContent: "flex-end",
+      position: "relative",
+      right: ["-50px", "-20px", "-50px", "-40px", "-50px", "-60px", "-15px"],
+      order: ["1", null, null, null, null],
+      width: [
+        "calc(100% - 110px)",
+        "calc(100% - 146px)",
+        "calc(100% - 290px)",
+        "calc(70% - 120px)",
+        "calc(100% - 420px)",
+        "calc(100% - 600px)",
+        "calc(100% - 610px)",
+      ],
+      textAlign: ["center", null],
+    },
+  },
   // root styles
   styles: {
     root: {
