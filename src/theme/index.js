@@ -114,6 +114,24 @@ export default {
         "140px",
       ],
     },
+    delivery: {
+      overflow: "hidden",
+      pt: ["25px", "45px", null, "110px", "60px", "90px", "125px"],
+      pb: ["60px", "85px", null, "140px", "145px", "150px", "140px", "160px"],
+    },
+    contact: {
+      pb: [
+        "60px",
+        "102px",
+        null,
+        "140px",
+        "145px",
+        "150px",
+        "145px",
+        "125px",
+        "140px",
+      ],
+    },
   },
   container: {
     home: {
@@ -191,6 +209,30 @@ export default {
     services: {
       position: "relative",
     },
+    delivery: {
+      position: "relative",
+      display: "flex",
+      flexWrap: "wrap",
+      alignItems: [
+        "flex-start",
+        "center",
+        "center",
+        "center",
+        null,
+        null,
+        null,
+      ],
+      justifyContent: [
+        "center",
+        "center",
+        "flex-start",
+        "flex-start",
+        "flex-start",
+        "center",
+        "center",
+      ],
+      flexDirection: ["column", "column", "row", "row", "row", "row", "row"],
+    },
   },
   content: {
     home: {
@@ -212,6 +254,21 @@ export default {
       textAlign: ["center", "center", "left", "left", "left", "left", "left"],
       position: "relative",
       right: ["-10px", "-3px", "-10px", "-13px", "-15px", "-60px", "-10px"],
+    },
+    delivery: {
+      maxWidth: ["360px", "572px", "295px", "350px", "400px", "395px", "395px"],
+      textAlign: ["center", "center", "left", "left", "left", "left", "left"],
+      order: ["1", "1", "2", null, null, null, null],
+      position: "relative",
+      right: ["-5px", "-5px", "10px", "10px", "20px", "20px", "20px"],
+    },
+    contact: {
+      fontSize: 13,
+      fontWeight: "500",
+      color: "heading_secondary",
+      position: "relative",
+      top: [null, null, null, "38px", "38px", "48px", "48px"],
+      right: ["-15px", "-19px", "-10px", "-80px", "-100px", "-70px", "-20px"],
     },
   },
   row: {
@@ -235,6 +292,10 @@ export default {
       ml: ["10px", 0, 0, 0, 0, "90px", "60px"],
       px: ["11px", 0, 0, "20px", "20px", "75px", "70px"],
     },
+    contact: {
+      position: "relative",
+      right: ["-5px", "5px", "3px", "10px", "10px", "-100px", "-145px"],
+    },
   },
   post: {
     services: {
@@ -255,6 +316,14 @@ export default {
       ],
       textAlign: "center",
       backgroundColor: "muted",
+    },
+    contact: {
+      mb: ["10px", null, null, null, 0],
+      flex: ["0 0 100%", null, "0 0 50%", null, "0 0 38%"],
+      textAlign: ["center", "center", "left", "left", "left", "left", "left"],
+      maxWidth: ["365px", "590px", null, null, null, "340px", "380px"],
+      position: "relative",
+      right: ["-4px", "-10px", "-10px", "-24px", "-25px", "-60px", "20px"],
     },
   },
   text: {
@@ -297,6 +366,22 @@ export default {
       mb: [1, "1px", null, null, null, null, "2px"],
       fontWeight: "heading",
     },
+    heading6: {
+      fontSize: [21, 21, 21, 21, 28, 28, 28, 28],
+      lineHeight: [1.3, null, null, 1.3],
+      color: "heading",
+      letterSpacing: "heading",
+      fontWeight: "heading",
+    },
+    heading7: {
+      fontSize: [21, 21, 21, 21, 21, 28, 28, 28],
+      lineHeight: [1.4, null, null, 1.35],
+      fontFamily: "heading",
+      letterSpacing: "-0.2px",
+      mx: ["0", null, null, "auto", "0"],
+      color: "heading",
+      fontWeight: "heading",
+    },
     secondary1: {
       fontSize: [15, null, null, null, 16, 16],
       lineHeight: 1.6,
@@ -337,6 +422,22 @@ export default {
       fontSize: [21, 21, null, null, null, 28, 28],
       fontWeight: "heading",
       color: "heading",
+    },
+    secondary6: {
+      fontSize: [15, null, null, null, 16, 16],
+      lineHeight: 1.6,
+      color: "heading_secondary",
+      fontWeight: "normal",
+      mt: [3, null, null, "18px"],
+      pr: [0, "10px", 0, null, null, null, null, "50px"],
+    },
+    secondary7: {
+      mt: [3, null, null, "18px"],
+      pr: [0, null, null, null, null, null, null, "10px"],
+      fontSize: [15, null, null, null, 16, 16],
+      lineHeight: [1.6, 1.7],
+      color: "heading_secondary",
+      fontWeight: "normal",
     },
   },
   buttons: {
@@ -434,6 +535,27 @@ export default {
       img: {
         width: ["175px", "140px", null, null, null, "140px", "140px"],
       },
+    },
+    delivery: {
+      mt: ["70px", null, null, 0],
+      mb: ["15px", null, null, 0],
+      pl: [0, null, null, null, 0],
+      display: "flex",
+      justifyContent: "flex-end",
+      position: "relative",
+      right: ["-55px", "-5px", "44px", "40px", "55px", "14px", "50px"],
+      order: ["2", "1", null, null, null],
+      maxWidth: [
+        "calc(100% - 110px)",
+        "calc(100% - 155px)",
+        "calc(100% - 310px)",
+        "calc(100% - 350px)",
+        "calc(100% - 420px)",
+        "calc(100% - 600px)",
+        "calc(100% - 600px)",
+      ],
+      minWidth: "",
+      textAlign: ["left", null],
     },
   },
   widget: {
