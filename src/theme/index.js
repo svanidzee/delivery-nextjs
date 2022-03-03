@@ -8,51 +8,45 @@ export default {
     "1366px",
     "1620px",
   ],
+  config: {
+    initialColorModeName: "light",
+  },
   space: [0, 5, 10, 15, 20, 25, 30, 50, 80, 100, 120, 150],
   colors: {
-    text: "hsl(85, 4%, 35%)", // body color and primary color
-    text_secondary: "#676A8B", // secondary body color
-    heading: "hsl(85, 4%, 15%)", // primary heading color
-    heading_secondary: "hsl(85, 4%, 35%)", // heading color
-    background: "#FFFFFF", // body background color
-    background_secondary: "red", // secondary background color
-
+    text: "hsl(85, 4%, 35%)",
+    text_secondary: "#676A8B",
+    heading: "hsl(85, 4%, 15%)",
+    heading_secondary: "hsl(85, 4%, 35%)",
+    background: "#FFFFFF",
+    background_secondary: "red",
     // nav color
     navcolor: "hsl(85, 4%, 15%)",
-
     // theme
-    toggler: "hsl(85, 4%, 15%)", // border color
-
-    primary: "hsl(85, 98%, 60%)", // primary button and link color
-    secondary: "hsl(85, 4%, 15%)", // secondary color - can be used for hover states
-    muted: "#FFFFFF", // muted color
-    accent: "hsl(85,98%,80%)", // a contrast color for emphasizing UI
-
+    toggler: "hsl(85, 4%, 15%)",
+    primary: "hsl(85, 98%, 60%)",
+    secondary: "hsl(85, 4%, 15%)",
+    muted: "#FFFFFF",
+    accent: "hsl(85,98%,80%)",
     // dark mode
     modes: {
       dark: {
-        text: "hsl(85, 4%, 35%)", // body color and primary color
-        text_secondary: "#676A8B", // secondary body color
-        heading: "hsl(120,3%,95%)", // primary heading color
-        heading_secondary: "hsl(79,5%,79%)", // heading color
+        text: "hsl(85, 4%, 35%)",
+        text_secondary: "#676A8B",
+        heading: "hsl(120,3%,95%)",
+        heading_secondary: "hsl(79,5%,79%)",
         background: "hsl(80,9%,12%)",
-        background_secondary: "red", // secondary background color
-
+        background_secondary: "red",
         navcolor: "#FFFFFF",
-
         // theme btn bg
-        toggler: "#FFFFFF", // border color
-
+        toggler: "#FFFFFF",
         // button bg
-        primary: "hsl(85, 98%, 60%)", // primary button and link color
+        primary: "hsl(85, 98%, 60%)",
         //btn color
-        secondary: "hsl(85, 4%, 15%)", // secondary color - can be used for hover states
-
+        secondary: "hsl(85, 4%, 15%)",
         // card bg
-        muted: "hsl(89,7%,16%)", // muted color
-
+        muted: "hsl(89,7%,16%)",
         // footer bg
-        accent: "hsl(89,7%,16%)", // a contrast color for emphasizing UI
+        accent: "hsl(89,7%,16%)",
       },
     },
   },
@@ -79,6 +73,58 @@ export default {
   },
   // variants
   layout: {
+    container: {
+      maxWidth: [
+        "100%",
+        null,
+        null,
+        "780px",
+        "1020px",
+        "1200px",
+        null,
+        "1350px",
+      ],
+      px: [4, null, 5, 6],
+    },
+    header: {
+      color: "hsl(85, 4%, 15%)",
+      fontWeight: 600,
+      py: [4, null, null, "25px"],
+      width: "100%",
+      position: "fixed",
+      top: 0,
+      left: 0,
+      backgroundColor: "transparent",
+      transition: "all 0.4s ease",
+
+      "&.sticky": {
+        backgroundColor: "background",
+        color: "text",
+        py: "15px",
+        boxShadow: "0 1px 2px rgba(0, 0, 0, 0.06)",
+      },
+    },
+    toolbar: {
+      display: ["none", null, null, null, "block"],
+      ml: "150px",
+      mr: "45px",
+      navLink: {
+        fontSize: 16,
+        color: "navcolor",
+        fontWeight: "600",
+        cursor: "pointer",
+        lineHeight: "1.2",
+        mr: "40px",
+        transition: "500ms",
+        ":last-child": {
+          mr: "0",
+        },
+        "&:hover, &.active": {
+          textShadow: "0 0 1px #0F2137",
+        },
+      },
+    },
+    main: {},
     footer: {
       pt: ["65px", null, "75px", null, "90px"],
       pb: ["25px", null, "35px", "25px", "80px"],
@@ -233,6 +279,11 @@ export default {
       ],
       flexDirection: ["column", "column", "row", "row", "row", "row", "row"],
     },
+    header: {
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "space-between",
+    },
   },
   content: {
     home: {
@@ -286,15 +337,15 @@ export default {
         "center",
       ],
     },
+    contact: {
+      position: "relative",
+      right: ["-5px", "5px", "3px", "10px", "10px", "-100px", "-145px"],
+    },
     footer: {
       display: "flex",
       flexWrap: "wrap",
       ml: ["10px", 0, 0, 0, 0, "90px", "60px"],
       px: ["11px", 0, 0, "20px", "20px", "75px", "70px"],
-    },
-    contact: {
-      position: "relative",
-      right: ["-5px", "5px", "3px", "10px", "10px", "-100px", "-145px"],
     },
   },
   post: {
@@ -382,6 +433,7 @@ export default {
       color: "heading",
       fontWeight: "heading",
     },
+    // secondary
     secondary1: {
       fontSize: [15, null, null, null, 16, 16],
       lineHeight: 1.6,
@@ -439,32 +491,26 @@ export default {
       color: "heading_secondary",
       fontWeight: "normal",
     },
-  },
-  buttons: {
-    primary: {
-      backgroundColor: "primary",
-      borderRadius: "3rem",
-      lineHeight: "heading",
-      fontSize: 15,
-      padding: ["14px 20px 13px", "14px 25px 13px", "15px 21px 15px"],
-      fontWeight: "heading",
-      display: "inline-flex",
-      alignItems: "center",
-      cursor: "pointer",
-      color: "secondary",
-      transition: "0.3s",
-      "&:hover": {
-        opacity: 0.8,
-      },
-    },
-    cardButton: {
-      backgroundColor: "transparent",
-      fontFamily: "heading",
-      color: "heading",
+    logo: {
       fontSize: 16,
       fontWeight: "heading",
-      pl: 0,
-      cursor: "pointer",
+      ml: [null, null, null, null, "7px", "160px", "117px"],
+      color: "navcolor",
+    },
+  },
+  links: {
+    bold: {
+      fontWeight: "bold",
+    },
+    nav: {
+      display: ["none", null, "inline-block"],
+      p: 2,
+    },
+    footer: {
+      display: "block",
+      px: 0,
+      color: "inherit",
+      textDecoration: "none",
     },
   },
   images: {
@@ -558,6 +604,33 @@ export default {
       textAlign: ["left", null],
     },
   },
+  buttons: {
+    primary: {
+      backgroundColor: "primary",
+      borderRadius: "3rem",
+      lineHeight: "heading",
+      fontSize: 15,
+      padding: "15px 21px 15px",
+      fontWeight: "heading",
+      display: "inline-flex",
+      alignItems: "center",
+      cursor: "pointer",
+      color: "secondary",
+      transition: "0.3s",
+      "&:hover": {
+        opacity: 0.8,
+      },
+    },
+    cardButton: {
+      backgroundColor: "transparent",
+      fontFamily: "heading",
+      color: "heading",
+      fontSize: 16,
+      fontWeight: "heading",
+      pl: 0,
+      cursor: "pointer",
+    },
+  },
   widget: {
     footer: {
       flex: ["0 0 50%", null, "0 0 33.33%", null, "0 0 20%"],
@@ -593,6 +666,14 @@ export default {
       },
     },
   },
+  themeToggler: {
+    position: "relative",
+    right: [null, "-4em", "-7em", "-9em", "1.5em", "1.5em", "0.5em"],
+    top: "1px",
+    color: "toggler",
+    fontSize: "1.8rem",
+    cursor: "pointer",
+  },
   // root styles
   styles: {
     root: {
@@ -600,7 +681,6 @@ export default {
       lineHeight: "body",
       fontWeight: "bolder",
       WebkitFontSmoothing: "antialiased",
-      //backgroundColor: "white",
       color: "text",
       a: {
         cursor: "pointer",
